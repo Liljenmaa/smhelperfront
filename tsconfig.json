@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es6",
+    "sourceMap": false,
+    "allowJs": false,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "webpack.config.js"
+  ],
+  "types": [
+    "typePatches"
+  ]
+}
