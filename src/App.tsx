@@ -1,5 +1,11 @@
-const App = (): JSX.Element => {
-    return <h1>New project up and running</h1>;
-};
+import Title from "./components/Title";
+import HeroPickContainer from "./components/HeroPickContainer";
+
+const App = (): JSX.Element => (
+    <div>
+        <Title />
+        <HeroPickContainer />
+    </div>
+);
 
 export default App;

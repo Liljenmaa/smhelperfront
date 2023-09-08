@@ -39,6 +39,7 @@
     "eslint-plugin-react": "^7.33.2",
     "html-webpack-plugin": "^5.5.3",
     "prettier": "3.0.3",
+    "style-loader": "^3.3.3",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2",
     "webpack": "^5.88.2",
