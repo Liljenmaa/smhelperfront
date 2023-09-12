@@ -1,0 +1,110 @@
+
+{
+    "adult": [
+        {
+            "name": "arakni",
+            "displayName": "Arakni, Huntsman"
+        },
+        {
+            "name": "azalea",
+            "displayName": "Azalea, Ace in the Hole"
+        },
+        {
+            "name": "bravo",
+            "displayName": "Bravo, Showstopper"
+        },
+        {
+            "name": "bravob",
+            "displayName": "Bravo, Star of the Show"
+        },
+        {
+            "name": "briar",
+            "displayName": "Briar, Warden of Thorns"
+        },
+        {
+            "name": "chane",
+            "displayName": "Chane, Bound by Shadow"
+        },
+        {
+            "name": "dash",
+            "displayName": "Dash, Inventor Extraordinaire"
+        },
+        {
+            "name": "dorinthea",
+            "displayName": "Dorinthea Ironsong"
+        },
+        {
+            "name": "dromai",
+            "displayName": "Dromai, Ash Artist"
+        },
+        {
+            "name": "fai",
+            "displayName": "Fai, Rising Rebellion"
+        },
+        {
+            "name": "iyslander",
+            "displayName": "Iyslander, Stormbind"
+        },
+        {
+            "name": "kano",
+            "displayName": "Kano, Dracai of Aether"
+        },
+        {
+            "name": "katsu",
+            "displayName": "Katsu, the Wanderer"
+        },
+        {
+            "name": "levia",
+            "displayName": "Levia, Shadowborn Abomination"
+        },
+        {
+            "name": "lexi",
+            "displayName": "Lexi, Livewire"
+        },
+        {
+            "name": "oldhim",
+            "displayName": "Oldhim, Grandfather of Eternity"
+        },
+        {
+            "name": "prismb",
+            "displayName": "Prism, Awakener of Sol"
+        },
+        {
+            "name": "prism",
+            "displayName": "Prism, Sculptor of Arc Light"
+        },
+        {
+            "name": "rhinar",
+            "displayName": "Rhinar, Reckless Rampage"
+        },
+        {
+            "name": "riptide",
+            "displayName": "Riptide, Lurker of the Deep"
+        },
+        {
+            "name": "boltyn",
+            "displayName": "Ser Boltyn, Breaker of Dawn"
+        },
+        {
+            "name": "teklovossen",
+            "displayName": "Teklovossen, Esteemed Magnate"
+        },
+        {
+            "name": "uzuri",
+            "displayName": "Uzuri, Switchblade"
+        },
+        {
+            "name": "viserai",
+            "displayName": "Viserai, Rune Blood"
+        },
+        {
+            "name": "vynnset",
+            "displayName": "Vynnset, Iron Maiden"
+        }
+
+
+    ],
+    "young": [
+
+    ]
+}

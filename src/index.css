@@ -4,32 +4,66 @@ body {
     color: white;
     font-size: 35px;
     caret-color: transparent;
+    overflow: hidden;
 }
 
 .hero-pick-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-self: center;
+    justify-content: space-evenly;
+    height: calc(100vh - 460px);
     border: black 5px solid;
-    height: 100%;
-    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .hero-pick {
+    position: relative;
     cursor: pointer;
-    margin-left: 100px;
-    margin-top: 100px;
+    width: 200px;
+    margin: 50px;
 }
 
 .hero-pick-picture {
-    background-image: url(/public/rhinar_hero.jpg);
     width: 200px;
     height: 279px;
 }
 
 .selection-indicator {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
     width: 50px;
     height: 50px;
     background-color: green;
+}
+
+.selection-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 398px;
+}
+
+.selected-heroes-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: black 5px solid;
+    width: 85%;
+}
+
+.selection-control-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 15%;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: black 5px solid;
 }
