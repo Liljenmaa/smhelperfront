@@ -1,10 +1,20 @@
 body {
     background-image: url(/public/background.jpg);
+    margin: 0px;
     text-align: center;
     color: white;
-    font-size: 35px;
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
     caret-color: transparent;
     overflow: hidden;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 4vh;
 }
 
 .hero-pick-container {
@@ -12,7 +22,8 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: calc(100vh - 460px);
+    box-sizing: border-box;
+    height: 65vh;
     border: black 5px solid;
     overflow-x: hidden;
     overflow-y: auto;
@@ -21,13 +32,17 @@ body {
 .hero-pick {
     position: relative;
     cursor: pointer;
-    width: 200px;
-    margin: 50px;
+    margin: 5vh;
 }
 
 .hero-pick-picture {
-    width: 200px;
-    height: 279px;
+    max-width: 100%;
+    max-height: 20vh;
+}
+
+.hero-pick-title {
+    margin-top: 1vh;
+    max-width: calc(20vh / 1.395);
 }
 
 .selection-indicator {
@@ -37,24 +52,27 @@ body {
     justify-content: center;
     top: 0px;
     left: 0px;
-    width: 50px;
-    height: 50px;
+    width: 4vh;
+    height: 4vh;
     background-color: green;
 }
 
 .selection-container {
     display: flex;
     flex-direction: row;
+    box-sizing: border-box;
     width: 100%;
-    min-height: 398px;
+    height: 31vh;
 }
+
 
 .selected-heroes-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: black 5px solid;
     width: 85%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .selection-control-panel {
@@ -62,8 +80,38 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     width: 15%;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: black 5px solid;
+    padding: 4vh;
+    border-left: black 5px solid;
+}
+
+.selection-input {
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.selection-button {
+    border: unset;
+    height: 5vh;
+    width: 100%;
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:opacity 0.3s;
+    -webkit-transition:opacity 0.3s;
+    -moz-transition:opacity 0.3s;
+    -ms-transition:opacity 0.3s;
+    -o-transition:opacity 0.3s;
+    opacity: 1;
+}
+
+.selection-button:disabled {
+    transition:opacity 0.3s;
+    -webkit-transition:opacity 0.3s;
+    -moz-transition:opacity 0.3s;
+    -ms-transition:opacity 0.3s;
+    -o-transition:opacity 0.3s;
+    opacity: 0.6;
 }

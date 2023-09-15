@@ -45,13 +45,12 @@ function SelectionControlPanel(props: SelectionControlPanelProps): JSX.Element {
                 className="selection-input"
                 id="nick"
                 type="text"
+                autoComplete="off"
                 onChange={handleNickChange}
             ></input>
             <button
                 className="selection-button"
-                onClick={() => {
-                    sendSelections();
-                }}
+                onClick={sendSelections}
                 disabled={nick === "" || props.selectedHeroes.length < 3}
             >
                 Lähetä

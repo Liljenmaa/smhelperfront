@@ -1,5 +1,5 @@
 const Title = (): JSX.Element => (
-    <div>Sankarien Mittelö sankarinvalintatyökalu</div>
+    <div className="title">Sankarien Mittelö sankarinvalintatyökalu. All images are copyright © Legend Story Studios.</div>
 );
 
 export default Title;
