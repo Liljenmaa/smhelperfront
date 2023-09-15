@@ -1,20 +1,22 @@
 import { useState, useEffect } from "react";
 import Hero from "./subcomponents/Hero";
-import HeroType from "./../types/Hero";
+import type HeroType from "./../types/Hero";
 import type HeroProps from "./../types/HeroProps";
 
 export default function HeroPickContainer(props: HeroProps): JSX.Element {
     const [heroes, setHeroes] = useState([] as HeroType[]);
 
     useEffect(() => {
-        fetch(`${process.env.HOST}${process.env.HEROES}`)
-        .then(response => response.json())
-        .then(data => setHeroes(data))
+        void fetch(`${process.env.HOST}${process.env.HEROES}`)
+            .then(async (response) => await response.json())
+            .then((data) => {
+                setHeroes(data);
+            });
     }, []);
 
     return (
         <div className="hero-pick-container">
-            {heroes && heroes.map((hero) => (
+            {heroes?.map((hero) => (
                 <Hero
                     key={hero.hero}
                     name={hero.hero}

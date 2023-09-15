@@ -22,7 +22,7 @@ export default function App(): JSX.Element {
 
     return (
         <div>
-            {!processComplete ?
+            {!processComplete ? (
                 <div>
                     <Title />
                     <HeroPickContainer
@@ -32,14 +32,17 @@ export default function App(): JSX.Element {
                     <SelectionContainer
                         selectedHeroes={selectedHeroes}
                         clickHandler={updateSelectedHeroes}
-                        processComplete={() => setProcessComplete(true)}
+                        processComplete={() => {
+                            setProcessComplete(true);
+                        }}
                     />
                 </div>
-            : <div>
-                   <p>Valinnat tallennettu. Kiitos!</p>
-                   <p>Jos haluat uusia valinnat, ota yhteyttä Gotoniin.</p>
-              </div>
-            }
+            ) : (
+                <div>
+                    <p>Valinnat tallennettu. Kiitos!</p>
+                    <p>Jos haluat uusia valinnat, ota yhteyttä Gotoniin.</p>
+                </div>
+            )}
         </div>
     );
 }
