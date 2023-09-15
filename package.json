@@ -4,8 +4,8 @@
   "description": "The frontend of Sankarien Mittelö tournament helper",
   "main": "src/index.tsx",
   "scripts": {
-    "start": "webpack-dev-server .",
-    "build": "webpack .",
+    "start": "webpack-dev-server --env mode=development .",
+    "build": "webpack --env mode=production .",
     "lint": "eslint \"**/*.{ts,tsx}\" --fix --max-warnings=0",
     "format": "prettier \"**/*.{ts,tsx}\" --write"
   },
@@ -47,6 +47,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

@@ -1,15 +1,16 @@
-import type HeroProps from "./../types/HeroProps";
+import type SelectedHeroesProps from "./../types/SelectedHeroesProps";
 import SelectedHeroesContainer from "./SelectedHeroesContainer";
 import SelectionControlPanel from "./SelectionControlPanel";
 
-const SelectionContainer = (props: HeroProps): JSX.Element => (
+const SelectionContainer = (props: SelectedHeroesProps): JSX.Element => (
     <div className="selection-container">
         <SelectedHeroesContainer
             selectedHeroes={props.selectedHeroes}
             clickHandler={props.clickHandler}
         />
         <SelectionControlPanel
-            numberOfSelectedHeroes={props.selectedHeroes.length}
+            selectedHeroes={props.selectedHeroes}
+            processComplete={props.processComplete}
         />
     </div>
 );

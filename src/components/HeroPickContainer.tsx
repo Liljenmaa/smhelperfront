@@ -1,20 +1,29 @@
-import heroes from "./../data/heroes.json";
+import { useState, useEffect } from "react";
 import Hero from "./subcomponents/Hero";
+import HeroType from "./../types/Hero";
 import type HeroProps from "./../types/HeroProps";
 
 export default function HeroPickContainer(props: HeroProps): JSX.Element {
+    const [heroes, setHeroes] = useState([] as HeroType[]);
+
+    useEffect(() => {
+        fetch(`${process.env.HOST}${process.env.HEROES}`)
+        .then(response => response.json())
+        .then(data => setHeroes(data))
+    }, []);
+
     return (
         <div className="hero-pick-container">
-            {heroes.adult.map((hero) => (
+            {heroes && heroes.map((hero) => (
                 <Hero
-                    key={hero.name}
-                    name={hero.name}
-                    displayName={hero.displayName}
+                    key={hero.hero}
+                    name={hero.hero}
+                    displayName={hero.name}
                     selectedPriority={props.selectedHeroes.findIndex(
-                        (name) => name === hero.name
+                        (name) => name === hero.hero
                     )}
                     clickHandler={() => {
-                        props.clickHandler(hero.name);
+                        props.clickHandler(hero.hero);
                     }}
                 ></Hero>
             ))}

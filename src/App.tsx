@@ -5,6 +5,7 @@ import SelectionContainer from "./components/SelectionContainer";
 
 export default function App(): JSX.Element {
     const [selectedHeroes, setSelectedHeroes] = useState([] as string[]);
+    const [processComplete, setProcessComplete] = useState(false);
 
     function updateSelectedHeroes(hero: string): void {
         const isAlreadySelected = selectedHeroes.includes(hero);
@@ -21,15 +22,24 @@ export default function App(): JSX.Element {
 
     return (
         <div>
-            <Title />
-            <HeroPickContainer
-                selectedHeroes={selectedHeroes}
-                clickHandler={updateSelectedHeroes}
-            />
-            <SelectionContainer
-                selectedHeroes={selectedHeroes}
-                clickHandler={updateSelectedHeroes}
-            />
+            {!processComplete ?
+                <div>
+                    <Title />
+                    <HeroPickContainer
+                        selectedHeroes={selectedHeroes}
+                        clickHandler={updateSelectedHeroes}
+                    />
+                    <SelectionContainer
+                        selectedHeroes={selectedHeroes}
+                        clickHandler={updateSelectedHeroes}
+                        processComplete={() => setProcessComplete(true)}
+                    />
+                </div>
+            : <div>
+                   <p>Valinnat tallennettu. Kiitos!</p>
+                   <p>Jos haluat uusia valinnat, ota yhteyttä Gotoniin.</p>
+              </div>
+            }
         </div>
     );
 }
