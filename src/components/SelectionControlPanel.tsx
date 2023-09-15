@@ -28,7 +28,7 @@ function SelectionControlPanel(props: SelectionControlPanelProps): JSX.Element {
         })
             .then(async (response) => await response.json())
             .then((data: { error?: string }) => {
-                if (data.error !== null) {
+                if (data.error !== undefined && data.error !== null) {
                     setError(true);
                 } else {
                     props.processComplete();

@@ -2,7 +2,12 @@
 The frontend of Sankarien Mittelö tournament helper
 
 # Installation
-Just run `npm install` in the root directory.
+Setup project:
+```
+npm install
+```
+
+Create `.env` file in the root directory using `.env.template`. `HOST` defines domain and port, the rest are endpoints.
 
 # Commands available
 Start development server: `npm start`
